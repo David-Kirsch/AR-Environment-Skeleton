@@ -21,4 +21,8 @@ Which method(s) did you have to create yourself? Why?
 I had to remove the teacher_id column in student table and remove the grade_level from teacher table. I did this because the teacher_id in the student table is no longer going to be the source of truth. The new source of truth will be contained in the new table grade_level. From there I added a grade_level table that would contain two columns (student_id, teacher_id). This allowed me to hold the association between both tables. Finally, I added the has_many on both student & teacher classes for grade_levels as well as has_many to the opposite tables (student/teacher), through: :grade_levels. I intentionally left out the grade column in grade_level table because I figured that if there is an association between a teacher and multiple students with all different grades, the you can pull the grade level from the student table that holds the grade. So if Timmy is in grade three and Smith is the teacher, you can find that Smith teaches third grade through Timmy.
 
 
+EDIT:
+Went back through and implimented the many-through method to pull from student record to see what grade(s) the teacher teaches. Made a method called #grades_taught.
+
+
 
