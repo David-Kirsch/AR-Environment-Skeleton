@@ -21,5 +21,19 @@ GradeLevel.create(teacher_id: 3, student_id: 3)
 GradeLevel.create(teacher_id: 1, student_id: 4)
 GradeLevel.create(teacher_id: 2, student_id: 1)
 
+ExtraCur.create(name:"Drama", activity: "club", competitive: 0)
+ExtraCur.create(name:"Lacrosse", activity: "sport", competitive: 1)
+ExtraCur.create(name:"Mock Trial", activity: "club", competitive: 1)
+ExtraCur.create(name:"Debate", activity: "club", competitive: 1)
+ExtraCur.create(name:"Basketball", activity: "sport", competitive: 1)
+
+StudentExtraCur.create(student_id: Student.all[0].id, extra_cur_id: ExtraCur.all[0].id)
+StudentExtraCur.create(student_id: Student.all[1].id, extra_cur_id: ExtraCur.all[1].id)
+StudentExtraCur.create(student_id: Student.all[2].id, extra_cur_id: ExtraCur.all[2].id)
+StudentExtraCur.create(student_id: Student.all[3].id, extra_cur_id: ExtraCur.all[3].id)
+StudentExtraCur.create(student_id: Student.all[0].id, extra_cur_id: ExtraCur.all[2].id)
+
+
+
 binding.pry
 0
